@@ -3,9 +3,14 @@ import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 
+// Webflow Cloud sets one of these env vars at deploy time so the app is served
+// under the configured mount path. Locally both are unset, so the app runs at "/".
+const base =
+  process.env.COSMIC_MOUNT_PATH || process.env.PUBLIC_BASE_PATH || "";
+
 // https://astro.build/config
 export default defineConfig({
-  base: "CLOUD_MOUNT_PATH",
+  base,
   output: "server",
   adapter: cloudflare({
     platformProxy: {

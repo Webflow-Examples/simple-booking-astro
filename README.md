@@ -34,7 +34,7 @@ A minimal booking engine template built with [Astro](https://astro.build), React
 | Command | Action |
 | :------ | :----- |
 | `npm install` | Installs dependencies |
-| `npm run dev` | Starts the Astro dev server. The app is served under the `CLOUD_MOUNT_PATH` base — locally this means [http://localhost:4321/CLOUD_MOUNT_PATH/](http://localhost:4321/CLOUD_MOUNT_PATH/). Webflow Cloud rewrites this to the configured mount path at deploy. |
+| `npm run dev` | Starts the Astro dev server at [http://localhost:4321](http://localhost:4321). |
 | `npm run build` | Builds the production site |
 | `npm run preview` | Runs `astro build` then `wrangler dev` for a local preview |
 | `npm run deploy` | Deploys with `webflow cloud deploy` |

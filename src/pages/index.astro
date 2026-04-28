@@ -2,12 +2,16 @@
 import { Chrome } from "../booking/Chrome";
 import { BookingFlow } from "../booking/BookingFlow";
 import "../booking/booking.css";
+
+// Public-asset URLs must include the configured base path. BASE_URL always
+// has a trailing slash; strip it so we can append "/file" cleanly.
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Simple Booking · Webflow Cloud</title>
