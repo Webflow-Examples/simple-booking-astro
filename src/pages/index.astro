@@ -1,0 +1,38 @@
+---
+import { Chrome } from "../booking/Chrome";
+import { BookingFlow } from "../booking/BookingFlow";
+import "../booking/booking.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Simple Booking · Webflow Cloud</title>
+	</head>
+	<body>
+		<Chrome
+			framework="Astro 6"
+			repoUrl="https://github.com/Webflow-Examples/simple-booking-astro"
+			client:load
+		>
+			<BookingFlow />
+		</Chrome>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: dark;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		background: #080808;
+		min-height: 100vh;
+	}
+</style>
